@@ -1,1 +1,60 @@
-asdasd
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+	<title>MidMe</title>
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyC7fichAp2725Nodedus-oB2afb7fnkJA8"></script>
+	<script type ="text/javascript" src="epoly.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+	<script type="text/javascript" src="http://oauth.googlecode.com/svn/code/javascript/oauth.js"></script>
+	<script type="text/javascript" src="http://oauth.googlecode.com/svn/code/javascript/sha1.js"></script>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="maps.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Dancing+Script:700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="index.css">
+  </head>
+
+<body onload="initialize()">
+
+<div id="top_bar">
+<center><h1>Mid Me<button type="button" id="reload" class="btn btn-info" value="Reload Page" onClick="window.location.reload()">Start Over!</button></h1></center>
+</div>
+
+<div id="map_canvas"></div>
+
+<div id="initial">
+
+		<div id="form">
+	  		<div class="form-group">
+	    		<input type="text"  name="start" id="start" class="form-control" placeholder="Location A" required>
+	  		</div>
+		    <div class="form-group">
+		    	<input type="text" name="end" id="end" class="form-control"placeholder="Location B" required>
+		  	</div>
+		  	<div class="form-group">
+		    	<input type="text" name="activity" id="activity" class="form-control" placeholder="Type of activity" required>
+		  	</div>
+	  		<center><button type="submit" class="btn btn-primary btn-lg" onclick="show_map(); calcRoute();">Show Me!</button></center>
+	  	</div>
+</div>
+
+<div id="results">
+	<table class="table table-striped" id="results_table">
+		<tr>
+			<th>Provider</th>
+		    <th>Name</th>
+		    <th>Rating</th>
+		   	<th>Address</th>
+		    <th>View Reviews</th>
+	  	</tr>	
+	</table>
+</div>
+
+
+
+
+
+</body>
+</html>
